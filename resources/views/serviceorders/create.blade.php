@@ -34,6 +34,14 @@
   <label class="col-form-label" for="inputDefault">Falla</label>
   <input type="text" class="form-control" placeholder="Describa la falla" name="failure">
   </div>
+
+  <div class="form-group">
+  <label class="col-form-label" for="inputDefault">Estatus</label>
+  <select name="type">
+  <option value="PENDIENTE" selected>PENDIENTE</option> 
+  <option value="ATENDIDO" >ATENDIDO</option>
+</select>
+  </div>
    
 
     <br>

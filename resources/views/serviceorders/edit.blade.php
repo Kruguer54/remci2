@@ -36,6 +36,14 @@
   <input type="text" class="form-control" name="failure" placeholder="Describe la falla" value="{{ $serviceOrder->failure }}">
   </div>
 
+  <div class="form-group">
+  <label class="col-form-label" for="inputDefault">Estatus</label>
+  <select name="type">
+  <option value="PENDIENTE"{{ $serviceOrder->type }}>PENDIENTE</option> 
+  <option value="ATENDIDO"{{ $serviceOrder->type }}>ATENDIDO</option>
+</select>
+  </div>
+
     <br>
     <input type="reset" value="Restablecer" class="btn btn-secondary">
     <input type="submit" value="Actualizar" class="btn btn-primary">

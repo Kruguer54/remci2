@@ -1,7 +1,7 @@
 @extends('adminlte::page')
 
 @section('content')
-<link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+{{-- <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet"> --}}
 <div class="container">
 <br>
 <table class="table table-hover">
@@ -10,9 +10,10 @@
       <th scope="col">ID</th>
       <th scope="col">Depto</th>
       <th scope="col">Equipo</th>
-      <th scope="col">Tecnico</th>
+      <th scope="col">Técnico</th>
       <th scope="col">Fecha</th>
       <th scope="col">Falla</th>
+      <th scope="col">Estatus</th>
       <th scope="col">Acciones</th>
     </tr>
   </thead>
@@ -27,6 +28,7 @@
       <td>{{ $serviceOrder->name }} {{ $serviceOrder->a_pater }}</td>
       <td>{{ $serviceOrder->date }}</td>
       <td>{{ $serviceOrder->failure }}</td>
+      <td>{{ $serviceOrder->type }}</td>
       
       <td>
          <!-- Eliminar el registro seleccionado -->

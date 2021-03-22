@@ -15,8 +15,8 @@ class ServiceOrderController extends Controller
      */
     public function index()
     {
-        //$datos['serviceOrders']=ServiceOrder::paginate(10);
-        //return view('serviceorders.index',$datos);
+        /*$datos['serviceOrders']=ServiceOrder::paginate(10);
+        return view('serviceorders.index',$datos);*/
 
         $ordenes['serviceOrders']=DB::table('service_orders')
         ->join('departments', 'departments.id', '=', 'service_orders.department_id')
@@ -29,7 +29,8 @@ class ServiceOrderController extends Controller
                  'technicals.name',
                  'technicals.a_pater', 
                  'service_orders.date', 
-                 'service_orders.failure')
+                 'service_orders.failure',
+                 'service_orders.type')
         ->get();
 
         return view('serviceorders.index',$ordenes);
@@ -77,7 +78,10 @@ class ServiceOrderController extends Controller
                  'technicals.name',
                  'technicals.a_pater', 
                  'service_orders.date', 
-                 'service_orders.failure')
+                 'service_orders.failure',
+                 'service_orders.type')
+        ->where('service_orders.type', 'PENDIENTE')
+
         ->get();
 
         return view('serviceorders.orderpend',$ordenes);

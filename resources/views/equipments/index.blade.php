@@ -22,14 +22,14 @@
   @foreach ($equipments as $equipment)
     <tr class="table-primary">
       
-      <td>{{ $equipment->id }}</td>
-      <td>{{ $equipment->namedepto }}</td>
-      <td>{{ $equipment->namebrand }}</td>
-      <td>{{ $equipment->model }}</td>
-      <td>{{ $equipment->serial_number }}</td>
-      <td>{{ $equipment->type }}</td>
-      <td>{{ $equipment->physical_state }}</td>
-      <td>
+        <td>{{ $equipment->id }}</td>
+        <td>{{ $equipment->namedepto }}</td>
+        <td>{{ $equipment->namebrand }}</td>
+        <td>{{ $equipment->model }}</td>
+        <td>{{ $equipment->serial_number }}</td>
+        <td>{{ $equipment->type }}</td>
+        <td>{{ $equipment->physical_state }}</td>
+        <td>
       <form action="{{ route('equipments_route.destroy', $equipment->id) }}" method="POST">
         {{csrf_field()}}
         {{ method_field('DELETE') }}

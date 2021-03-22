@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Equipment;
+use App\Department;
 use Illuminate\Http\Request;
 use DB;
 class EquipmentController extends Controller
@@ -108,4 +109,14 @@ class EquipmentController extends Controller
     {
         //
     }
+
+
+    /*public function getDepartments (Request $request)
+
+    {
+        if ($request->ajax()) {
+            $departments = Department::where()
+        }
+    }*/
+
 }

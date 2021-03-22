@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateService_ordersTable extends Migration
+class CreateTechnicalsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,11 @@ class CreateService_ordersTable extends Migration
      */
     public function up()
     {
-        Schema::create('service_orders', function (Blueprint $table) {
+        Schema::create('technicals', function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger('department_id');
-            $table->unsignedInteger('equipment_id');
-            $table->unsignedInteger('technical_id');
-            $table->date('date');
-            $table->text('failure');
+            $table->string('name', 50);
+            $table->string('a_pater', 50);
+            $table->string('a_mater', 50);
             $table->timestamps();
         });
     }
@@ -31,6 +29,6 @@ class CreateService_ordersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('serviceorders');
+        Schema::dropIfExists('technicals');
     }
 }

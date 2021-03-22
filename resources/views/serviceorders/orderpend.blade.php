@@ -16,6 +16,7 @@
       <th scope="col">Tecnico</th>
       <th scope="col">Fecha</th>
       <th scope="col">Falla</th>
+      <th scope="col">Estatus</th>
       <th scope="col">Acciones</th>
     </tr>
   </thead>
@@ -30,6 +31,7 @@
       <td>{{ $serviceOrder->name }} {{ $serviceOrder->a_pater }}</td>
       <td>{{ $serviceOrder->date }}</td>
       <td>{{ $serviceOrder->failure }}</td>
+      <td>{{ $serviceOrder->type }}</td>
       
       <td>
          <!-- Eliminar el registro seleccionado -->
